@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Image
-        src="/ucdevs.png"
+        src="/UCDevs.png"
         alt="UCDevs logo"
         width={256}
         height={256}
