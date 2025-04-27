@@ -10,7 +10,7 @@ const leagueSpartan = League_Spartan({
 export default function Home() {
   return (
     <div
-      className={`flex items-center flex-col justify-center min-h-screen ${leagueSpartan.variable}`}
+      className={`flex items-center flex-col justify-center min-h-screen p-4 sm:p-8 ${leagueSpartan.variable}`}
       style={{ background: "#101010" }}
     >
       <Head>
@@ -30,11 +30,11 @@ export default function Home() {
         height={256}
         priority
       />
-      <p className="text-white text-center text-lg max-w-2xl" style={{ fontFamily: 'var(--font-league-spartan)' }}>
+      <p className="text-white text-center text-base sm:text-lg leading-tight sm:leading-normal max-w-2xl" style={{ fontFamily: 'var(--font-league-spartan)' }}>
         We&apos;re an up-and-coming club at the University of Calgary. Our primary focus will be web development, particularly working on projects for nonprofits. Stay tuned!
       </p>
       <a
-        className="bg-white text-black font-semibold px-6 py-2 rounded-xl mt-4 inline-block text-center hover:bg-[#EAEAEA] transition-colors duration-300"
+        className="bg-white text-black font-semibold px-4 py-2 sm:px-6 sm:py-2 rounded-xl mt-4 inline-block text-center hover:bg-[#EAEAEA] transition-colors duration-300"
         style={{ fontFamily: 'var(--font-league-spartan)', cursor: 'pointer' }}
         href="https://discord.gg/XmXhmJ9Xx6"
         target="_blank"
