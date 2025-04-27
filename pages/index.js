@@ -17,6 +17,11 @@ export default function Home() {
         <title>UCDevs</title>
         <meta name="description" content="UCDevs" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="UCDevs" />
+        <meta property="og:description" content="Join UCDevs, an up-and-coming club at the University of Calgary focused on web development projects for nonprofits." />
+        <meta property="og:image" content="/UCDevs.png" />
+        <meta property="og:url" content="https://ucdevs.org" />
+        <meta property="og:type" content="website" />
       </Head>
       <Image
         src="/UCDevs.png"
