@@ -26,8 +26,17 @@ export default function Home() {
         priority
       />
       <p className="text-white text-center text-lg max-w-2xl" style={{ fontFamily: 'var(--font-league-spartan)' }}>
-        We&apos;re an up-and-coming club at the University of Calgary. Our primary focus will be web development, particularly working on projects for nonprofits.
+        We&apos;re an up-and-coming club at the University of Calgary. Our primary focus will be web development, particularly working on projects for nonprofits. Stay tuned!
       </p>
+      <a
+        className="bg-white text-black font-semibold px-6 py-2 rounded-xl mt-4 inline-block text-center"
+        style={{ fontFamily: 'var(--font-league-spartan)', cursor: 'pointer' }}
+        href="https://discord.gg/XmXhmJ9Xx6"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Join Us
+      </a>
     </div>
   );
 }
