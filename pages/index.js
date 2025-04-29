@@ -7,14 +7,13 @@ import PartnershipSection from "../components/PartnershipSection";
 
 // Using League Spartan font
 const leagueSpartan = League_Spartan({
-  variable: "--font-league-spartan",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["500", "900"],
 });
 
 export default function Home() {
   return (
-    <div className={`min-h-screen bg-[#101010] ${leagueSpartan.variable}`}>
+    <div className={`min-h-screen bg-[#101010] ${leagueSpartan.className}`}>
       <Head>
         <title>UCDevs</title>
         <meta name="description" content="UCDevs - University of Calgary's society of web developers" />
