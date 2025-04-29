@@ -1,6 +1,11 @@
-import Image from "next/image";
 import Head from "next/head";
+import Image from "next/image";
 import { League_Spartan } from "next/font/google";
+import NavBar from "../components/NavBar";
+import HeroSection from "../components/HeroSection";
+import CardsSection from "../components/CardsSection";
+import PartnershipSection from "../components/PartnershipSection";
+import Footer from "../components/Footer";
 
 // Using League Spartan font
 const leagueSpartan = League_Spartan({
@@ -22,30 +27,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
       </Head>
 
-      {/* Fixed Navigation Bar */}
-      <div className="fixed top-0 left-0 right-0 px-8 py-8 md:px-16 flex justify-between items-center z-50">
-        <div className="logo">
-          <Image src="/CornerLogo.png" alt="UCDevs logo" width={90} height={30} />
-        </div>
-        
-        <div className="hidden md:flex items-center">
-          <nav className="flex bg-[#191919] px-6 py-3 rounded-[15px]">
-            <a href="/projects" className="text-white hover:text-gray-300 transition-colors px-4">Projects</a>
-            <a href="/learn" className="text-white hover:text-gray-300 transition-colors px-4">Learn</a>
-            <a href="/origins" className="text-white hover:text-gray-300 transition-colors px-4">Origins</a>
-            <a href="/partners" className="text-white hover:text-gray-300 transition-colors px-4">Partners</a>
-          </nav>
-        </div>
-        
-        <a 
-          href="https://discord.gg/XmXhmJ9Xx6"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white text-black px-6 py-3 rounded-[15px] font-medium hover:bg-gray-200 transition-colors"
-        >
-          Get involved
-        </a>
-      </div>
+      <NavBar />
 
       {/* Main Content */}
       <div className="relative w-full h-screen">
@@ -64,7 +46,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#101010] to-transparent z-10"></div>
 
         {/* Content */}
-        <div className="absolute bottom-4 left-0 right-0 z-20 px-8 md:px-16 flex flex-col md:flex-row justify-between md:items-end gap-12 md:gap-6">
+        <div className="absolute bottom-4 left-0 right-0 z-20 px-8 md:px-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-6">
           {/* Left side - Catch Phrase*/}
           <div className="md:max-w-[45%]">
             <div className="text-white text-7xl sm:text-8xl md:text-9xl font-bold leading-[0.95] tracking-tight">
@@ -76,16 +58,14 @@ export default function Home() {
           </div>
 
           {/* Right side - description and buttons */}
-          <div className="w-full md:w-1/2 lg:w-[55%] xl:w-3/5 md:pl-8 pb-7 flex flex-col justify-end">
-            <div>
-              <p className="text-white text-xl md:text-2xl max-w-3xl">
-                UCDevs is the University of Calgary&apos;s society of web developers. 
-                Learn design and development skills at no cost, then apply them to 
-                real-world projects for nonprofits. No previous experience required.
-              </p>
-            </div>
-            {/* Button container */}
-            <div className="flex space-x-3 sm:space-x-4 mt-4 md:mt-6">
+          <div className="w-full md:w-1/2 lg:w-[55%] xl:w-3/5 md:pl-8 md:pb-7">
+            <p className="text-white text-xl md:text-2xl mb-8 max-w-3xl">
+              UCDevs is the University of Calgary&apos;s society of web developers. 
+              Learn design and development skills at no cost, then apply them to 
+              real-world projects for nonprofits. No previous experience required.
+            </p>
+            {/* Updated button container to keep buttons side by side on all screens */}
+            <div className="flex space-x-3 sm:space-x-4">
               <a 
                 href="#learn"
                 className="bg-white text-black px-4 sm:px-8 py-3 rounded-[15px] font-medium flex items-center hover:bg-gray-200 transition-colors text-sm sm:text-base"
