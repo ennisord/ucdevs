@@ -30,7 +30,7 @@ export default function PartnershipSection() {
                 Explore Partnerships
               </h2>
               <p className="text-white text-xl mb-8">
-                UCDevs is always looking for new partners, whether you're a business 
+                UCDevs is always looking for new partners, whether you&apos;re a business 
                 looking to sponsor us or a nonprofit in need of a new online presence.
               </p>
               <a 

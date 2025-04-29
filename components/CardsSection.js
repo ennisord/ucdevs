@@ -77,7 +77,7 @@ export default function CardsSection() {
             </div>
             <h2 className="text-white text-2xl lg:text-3xl font-bold mb-3">Team</h2>
             <p className="text-gray-300 mb-6 flex-grow">
-              We're a team of polished web developers, designers, and engineers with the agency to spearhead substantial projects.
+              We&apos;re a team of polished web developers, designers, and engineers with the agency to spearhead substantial projects.
             </p>
             <a 
               href="#team"
