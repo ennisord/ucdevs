@@ -4,14 +4,13 @@ import { League_Spartan } from "next/font/google";
 
 // Using League Spartan font
 const leagueSpartan = League_Spartan({
-  variable: "--font-league-spartan",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["500", "900"],
 });
 
 export default function Home() {
   return (
-    <div className={`min-h-screen bg-[#101010] ${leagueSpartan.variable}`}>
+    <div className={`min-h-screen bg-[#101010] ${leagueSpartan.className}`}>
       <Head>
         <title>UCDevs</title>
         <meta name="description" content="UCDevs - University of Calgary's society of web developers" />
@@ -24,13 +23,13 @@ export default function Home() {
       </Head>
 
       {/* Fixed Navigation Bar */}
-      <div className="fixed top-0 left-0 right-0 px-8 py-8 flex justify-between items-center z-50">
+      <div className="fixed top-0 left-0 right-0 px-8 py-8 md:px-12 flex justify-between items-center z-50">
         <div className="logo">
           <Image src="/UCDevs.png" alt="UCDevs logo" width={120} height={40} />
         </div>
         
         <div className="hidden md:flex items-center">
-          <nav className="flex bg-[#191919] px-6 py-3 rounded-full">
+          <nav className="flex bg-[#191919] px-6 py-3 rounded-[15px]">
             <a href="#projects" className="text-white hover:text-gray-300 transition-colors px-4">Projects</a>
             <a href="#learn" className="text-white hover:text-gray-300 transition-colors px-4">Learn</a>
             <a href="#origins" className="text-white hover:text-gray-300 transition-colors px-4">Origins</a>
@@ -42,7 +41,7 @@ export default function Home() {
           href="https://discord.gg/XmXhmJ9Xx6"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors"
+          className="bg-white text-black px-6 py-3 rounded-[15px] font-medium hover:bg-gray-200 transition-colors"
         >
           Get involved
         </a>
