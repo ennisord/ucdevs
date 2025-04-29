@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import CardsSection from "../components/CardsSection";
 import PartnershipSection from "../components/PartnershipSection";
+import Footer from "../components/Footer";
 
 // Using League Spartan font
 const leagueSpartan = League_Spartan({
@@ -36,6 +37,9 @@ export default function Home() {
 
       {/* Partnership Section */}
       <PartnershipSection />
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }
