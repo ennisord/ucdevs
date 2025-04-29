@@ -64,7 +64,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#101010] to-transparent z-10"></div>
 
         {/* Content */}
-        <div className="absolute bottom-16 left-0 right-0 z-20 px-8 md:px-16 flex flex-col md:flex-row justify-between md:items-end gap-12 md:gap-6">
+        <div className="absolute bottom-4 left-0 right-0 z-20 px-8 md:px-16 flex flex-col md:flex-row justify-between md:items-end gap-12 md:gap-6">
           {/* Left side - Catch Phrase*/}
           <div className="md:max-w-[45%]">
             <div className="text-white text-7xl sm:text-8xl md:text-9xl font-bold leading-[0.95] tracking-tight">
@@ -76,7 +76,7 @@ export default function Home() {
           </div>
 
           {/* Right side - description and buttons */}
-          <div className="w-full md:w-1/2 lg:w-[55%] xl:w-3/5 md:pl-8 flex flex-col justify-end">
+          <div className="w-full md:w-1/2 lg:w-[55%] xl:w-3/5 md:pl-8 pb-7 flex flex-col justify-end">
             <div>
               <p className="text-white text-xl md:text-2xl max-w-3xl">
                 UCDevs is the University of Calgary&apos;s society of web developers. 
@@ -88,7 +88,7 @@ export default function Home() {
             <div className="flex space-x-3 sm:space-x-4 mt-4 md:mt-6">
               <a 
                 href="#learn"
-                className="bg-white text-black px-4 sm:px-8 py-3 rounded-full font-medium flex items-center hover:bg-gray-200 transition-colors text-sm sm:text-base"
+                className="bg-white text-black px-4 sm:px-8 py-3 rounded-[15px] font-medium flex items-center hover:bg-gray-200 transition-colors text-sm sm:text-base"
               >
                 Learn More
                 <svg className="ml-1 sm:ml-2 w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +99,7 @@ export default function Home() {
                 href="https://discord.gg/XmXhmJ9Xx6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-black px-4 sm:px-8 py-3 rounded-full font-medium flex items-center hover:bg-gray-200 transition-colors text-sm sm:text-base"
+                className="bg-white text-black px-4 sm:px-8 py-3 rounded-[15px] font-medium flex items-center hover:bg-gray-200 transition-colors text-sm sm:text-base"
               >
                 Join UCDevs
                 <svg className="ml-1 sm:ml-2 w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
