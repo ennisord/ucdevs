@@ -97,7 +97,7 @@ export default function Home() {
                 href="https://discord.gg/XmXhmJ9Xx6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-transparent text-white border border-white px-4 sm:px-8 py-3 rounded-full font-medium flex items-center hover:bg-white hover:text-black transition-colors text-sm sm:text-base"
+                className="bg-white text-black px-4 sm:px-8 py-3 rounded-full font-medium flex items-center hover:bg-gray-200 transition-colors text-sm sm:text-base"
               >
                 Join UCDevs
                 <svg className="ml-1 sm:ml-2 w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
