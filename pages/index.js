@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import { League_Spartan } from "next/font/google";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
@@ -26,20 +27,19 @@ export default function Home() {
         <meta property="og:type" content="website" />
       </Head>
 
-      {/* Navigation Bar */}
       <NavBar />
 
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Cards Section */}
-      <CardsSection />
-
-      {/* Partnership Section */}
-      <PartnershipSection />
-
-      {/* Footer Section */}
-      <Footer />
+       {/* Hero Section */}
+       <HeroSection />
+ 
+       {/* Cards Section */}
+       <CardsSection />
+ 
+       {/* Partnership Section */}
+       <PartnershipSection />
+ 
+       {/* Footer Section */}
+       <Footer />
     </div>
   );
 }
