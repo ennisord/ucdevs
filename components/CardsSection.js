@@ -32,21 +32,19 @@ export default function CardsSection() {
     <div className={`border border-white/20 border-dashed border-2 rounded-[20px] p-4 flex flex-col h-full ${
       isWide ? 'md:col-span-2 lg:col-span-1' : ''
     }`}>
-      {/* Image container with fixed dimensions */}
-      <div className="flex justify-center mb-6">
-        <div className="relative w-full h-[516px]">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            fill
-            style={{ objectFit: 'contain' }}
-            className="rounded-lg"
-          />
-        </div>
+      {/* Image container that takes full width of card */}
+      <div className="w-full relative h-[516px] rounded-[15px] overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          style={{ objectFit: 'cover' }}
+          className="rounded-t-[15px]"
+        />
       </div>
       
       {/* Card content */}
-      <h2 className="text-white text-2xl lg:text-3xl font-bold mb-3">{title}</h2>
+      <h2 className="mt-4 text-white text-2xl lg:text-3xl font-bold mb-3">{title}</h2>
       <p className="text-gray-300 mb-6 flex-grow">
         {description}
       </p>
