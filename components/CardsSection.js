@@ -29,7 +29,7 @@ export default function CardsSection() {
     linkHref, 
     isWide = false 
   }) => (
-    <div className={`border border-white/20 border-dashed border-2 rounded-lg p-4 flex flex-col h-full ${
+    <div className={`border border-white/20 border-dashed border-2 rounded-[20px] p-4 flex flex-col h-full ${
       isWide ? 'md:col-span-2 lg:col-span-1' : ''
     }`}>
       {/* Image container with fixed dimensions */}
