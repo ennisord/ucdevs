@@ -49,7 +49,7 @@ export default function NavBar() {
         <Image src="/image.png" alt="UCDevs logo" width={90} height={30} />
       </div>
       
-      <div className="hidden md:flex items-center">
+      <div className="hidden md:flex items-center ml-7">
         <nav className="flex bg-[#191919] px-6 py-3 rounded-[15px]">
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#learn">Learn</NavLink>
