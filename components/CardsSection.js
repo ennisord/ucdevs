@@ -87,7 +87,7 @@ export default function CardsSection() {
 
   return (
     // Main section container with responsive padding
-    <div className="bg-[#101010] py-16 px-8 md:px-16">
+    <div className="bg-[#101010] py-16 px-4 md:px-16">
       <div className="container mx-auto">
         {/* Responsive grid layout
          * - 1 column on mobile

@@ -71,7 +71,7 @@ export default function PartnershipSection() {
 
         {/* Content container with left padding */}
         <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-8 md:px-16 relative z-10">
+          <div className="container mx-auto px-4 md:px-16 relative z-10">
             <div className="max-w-xl">
               <h2 className="text-white text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-none">
                 Explore Partnerships
