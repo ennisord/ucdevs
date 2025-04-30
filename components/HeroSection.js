@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { League_Spartan } from "next/font/google";
 import ArrowButton from "./ArrowButton";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -8,12 +10,31 @@ const leagueSpartan = League_Spartan({
 });
 
 export default function HeroSection() {
+  // Reference to the section container
+  const containerRef = useRef(null);
+  
+  // Get scroll progress for this section
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+  
+  // Transform the Y position based on scroll progress
+  // This creates the parallax effect - background moves slower than foreground
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  
   return (
-    <div className={`min-h-screen bg-[#101010] ${leagueSpartan.className}`}>
+    <div 
+      ref={containerRef}
+      className={`min-h-screen bg-[#101010] ${leagueSpartan.className} overflow-hidden`}
+    >
       {/* Main Content */}
       <div className="relative w-full h-screen">
-        {/* Background image */}
-        <div className="absolute inset-0 bg-cover bg-center z-0">
+        {/* Background image with parallax effect */}
+        <motion.div 
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{ y: backgroundY }}
+        >
           <Image 
             src="/Index.svg" 
             alt="UCDevs background" 
@@ -21,7 +42,7 @@ export default function HeroSection() {
             style={{ objectFit: 'cover' }}
             priority
           />
-        </div>
+        </motion.div>
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#101010] to-transparent z-10"></div>

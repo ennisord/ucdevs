@@ -1,13 +1,59 @@
 import Image from "next/image";
 import ArrowButton from "./ArrowButton";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 export default function PartnershipSection() {
+  // Reference to the section container
+  const sectionRef = useRef(null);
+  // State to store the initial offset position
+  const [initialOffset, setInitialOffset] = useState(0);
+  
+  // Effect to calculate the section's position on the page
+  useEffect(() => {
+    if (sectionRef.current) {
+      const calculateOffset = () => {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const offsetTop = rect.top + scrollTop;
+        // Get position as percentage of total page height
+        const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const positionPercentage = offsetTop / pageHeight;
+        setInitialOffset(positionPercentage * -20); // Adjust offset factor as needed
+      };
+      
+      calculateOffset();
+      // Recalculate on resize
+      window.addEventListener('resize', calculateOffset);
+      return () => window.removeEventListener('resize', calculateOffset);
+    }
+  }, []);
+  
+  // Get scroll progress for this section
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"]
+  });
+  
+  // Transform the Y position based on scroll progress with position offset
+  const backgroundY = useTransform(
+    scrollYProgress, 
+    [0, 1], 
+    [`${initialOffset}%`, `${initialOffset + 40}%`]
+  );
+  
   return (
-    <div className="relative w-full">
+    <div 
+      ref={sectionRef}
+      className="relative w-full overflow-hidden"
+    >
       {/* Container - half height on mobile, aspect ratio on desktop */}
       <div className="relative w-full h-[75vh] md:h-auto md:aspect-[16/10]">
-        {/* Background image */}
-        <div className="absolute inset-0 z-0">
+        {/* Background image with parallax effect */}
+        <motion.div 
+          className="absolute inset-0 z-0"
+          style={{ y: backgroundY }}
+        >
           <Image
             src="/index_partnership.svg"
             alt="Partnership background"
@@ -15,7 +61,7 @@ export default function PartnershipSection() {
             style={{ objectFit: 'cover' }}
             priority
           />
-        </div>
+        </motion.div>
         
         {/* Top gradient overlay - black to transparent */}
         <div className="absolute top-0 left-0 right-0 h-40 md:h-60 bg-gradient-to-b from-[#101010] to-transparent z-[1]"></div>
