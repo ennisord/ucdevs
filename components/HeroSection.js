@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { League_Spartan } from "next/font/google";
+import ArrowButton from "./ArrowButton";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -46,26 +47,15 @@ export default function HeroSection() {
             </p>
             {/* Updated button container to keep buttons side by side on all screens */}
             <div className="flex space-x-3 sm:space-x-4">
-              <a 
+              <ArrowButton 
                 href="#learn"
-                className="bg-white text-black px-4 sm:px-8 py-3 rounded-[15px] font-medium flex items-center hover:bg-gray-200 transition-colors text-sm sm:text-base"
-              >
-                Learn More
-                <svg className="ml-1 sm:ml-2 w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-              <a
+                text="Learn More"
+              />
+              <ArrowButton
                 href="https://discord.gg/XmXhmJ9Xx6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-black px-4 sm:px-8 py-3 rounded-[15px] font-medium flex items-center hover:bg-gray-200 transition-colors text-sm sm:text-base"
-              >
-                Join UCDevs
-                <svg className="ml-1 sm:ml-2 w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
+                text="Join UCDevs"
+                external={true}
+              />
             </div>
           </div>
         </div>

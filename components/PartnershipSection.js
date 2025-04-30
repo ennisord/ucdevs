@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ArrowButton from "./ArrowButton";
 
 export default function PartnershipSection() {
   return (
@@ -26,22 +27,18 @@ export default function PartnershipSection() {
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-8 md:px-16 relative z-10">
             <div className="max-w-xl">
-              <h2 className="text-white text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-tight">
+              <h2 className="text-white text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-none">
                 Explore Partnerships
               </h2>
               <p className="text-white text-xl mb-8">
                 UCDevs is always looking for new partners, whether you&apos;re a business 
                 looking to sponsor us or a nonprofit in need of a new online presence.
               </p>
-              <a 
+              <ArrowButton 
                 href="#partnerships"
-                className="bg-white text-black px-6 py-3 rounded-full font-medium inline-flex items-center hover:bg-gray-200 transition-colors"
-              >
-                Learn More
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
+                text="Learn More"
+                className="w-44 justify-center"
+              />
             </div>
           </div>
         </div>

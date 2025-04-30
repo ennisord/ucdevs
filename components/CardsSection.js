@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ArrowButton from "./ArrowButton";
 
 /**
  * CardsSection Component
@@ -28,12 +29,12 @@ export default function CardsSection() {
     linkHref, 
     isWide = false 
   }) => (
-    <div className={`border border-gray-700 rounded-lg p-6 flex flex-col h-full ${
+    <div className={`border border-white/20 border-dashed border-2 rounded-lg p-4 flex flex-col h-full ${
       isWide ? 'md:col-span-2 lg:col-span-1' : ''
     }`}>
       {/* Image container with fixed dimensions */}
       <div className="flex justify-center mb-6">
-        <div className="relative w-full max-w-[379px] h-[516px]">
+        <div className="relative w-full h-[516px]">
           <Image
             src={imageSrc}
             alt={imageAlt}
@@ -51,15 +52,11 @@ export default function CardsSection() {
       </p>
       
       {/* Call to action button with arrow */}
-      <a 
+      <ArrowButton 
         href={linkHref}
-        className="bg-white text-black px-4 py-3 rounded-full font-medium flex items-center hover:bg-gray-200 transition-colors self-start text-sm sm:text-base"
-      >
-        Learn More
-        <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </a>
+        text="Learn More"
+        className="self-start"
+      />
     </div>
   );
 
