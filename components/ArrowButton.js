@@ -44,7 +44,7 @@ export default function ArrowButton({ href, text, external = false, className = 
   return (
     <a
       href={href}
-      className={`bg-white text-black px-4 sm:px-8 py-3 rounded-[15px] font-medium flex items-center transition-colors duration-200 text-sm sm:text-base ${className}`}
+      className={`bg-white text-black px-4 sm:px-6 py-[10px] rounded-[15px] font-medium flex items-center transition-colors duration-200 text-sm sm:text-lg ${className}`}
       style={{ 
         backgroundColor: hoverColor || "white",
         color: "black"
