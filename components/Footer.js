@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Large UCDevs Logo Watermark - positioned below links */}
+      {/* Large UCDevs Logo Watermark - positioned below links with responsive scaling */}
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden z-10" style={{ height: "65%" }}>
         <div className="relative w-full h-full">
           <Image 
@@ -52,8 +52,9 @@ export default function Footer() {
               objectFit: 'contain',
               objectPosition: 'center top',
               opacity: 0.08,
-              transform: 'scale(1.8)'
+              transform: 'scale(var(--logo-scale))'
             }}
+            className="scale-[0.9] sm:scale-[1.2] md:scale-[1.5] lg:scale-[1.8]"
             priority={false}
           />
         </div>

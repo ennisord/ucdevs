@@ -4,24 +4,24 @@ import ArrowButton from "./ArrowButton";
 export default function PartnershipSection() {
   return (
     <div className="relative w-full">
-      {/* Aspect ratio container to maintain 1440x900 ratio */}
-      <div className="relative w-full aspect-[16/10]"> {/* Close to 1440x900 aspect ratio */}
+      {/* Container - half height on mobile, aspect ratio on desktop */}
+      <div className="relative w-full h-[75vh] md:h-auto md:aspect-[16/10]">
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/index_partnership.svg"
             alt="Partnership background"
             fill
-            style={{ objectFit: 'contain' }}
+            style={{ objectFit: 'cover' }}
             priority
           />
         </div>
         
         {/* Top gradient overlay - black to transparent */}
-        <div className="absolute top-0 left-0 right-0 h-60 md:h-80 bg-gradient-to-b from-[#101010] to-transparent z-[1]"></div>
+        <div className="absolute top-0 left-0 right-0 h-40 md:h-60 bg-gradient-to-b from-[#101010] to-transparent z-[1]"></div>
         
         {/* Bottom gradient overlay - transparent to black */}
-        <div className="absolute bottom-0 left-0 right-0 h-60 md:h-80 bg-gradient-to-t from-[#101010] to-transparent z-[1]"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-40 md:h-60 bg-gradient-to-t from-[#101010] to-transparent z-[1]"></div>
 
         {/* Content container with left padding */}
         <div className="absolute inset-0 flex items-center">
