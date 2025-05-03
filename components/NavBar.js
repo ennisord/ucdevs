@@ -10,6 +10,13 @@ export default function NavBar() {
     { href: "#partners", label: "Partners", about: "Meet the collaborators, sponsors, and nonprofit partners we work with." }
   ];
 
+  // Social media links
+  const socialLinks = [
+    { href: "https://twitter.com", label: "Twitter" },
+    { href: "https://youtube.com", label: "YouTube" },
+    { href: "https://discord.com", label: "Discord" }
+  ];
+
   // State to track if mobile menu is open
   const [menuOpen, setMenuOpen] = useState(false);
   
@@ -70,7 +77,12 @@ export default function NavBar() {
     <div className={`fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-50 ${containerClasses}`}>
       {/* Mobile and desktop navbar */}
       <div className={`w-full h-full flex ${menuOpen ? 'items-start' : 'justify-center items-center'}`}>
-        <div className={`relative flex flex-col bg-[#191919] bg-opacity-80 backdrop-blur-md border border-white/10 transition-all duration-300 ease-in-out ${navbarClasses}`}>
+        <div 
+          className={`relative flex flex-col bg-[#191919] bg-opacity-80 backdrop-blur-md border border-white/10 transition-all duration-300 ease-in-out ${navbarClasses}`}
+          style={menuOpen ? {
+            background: 'linear-gradient(to top, #2176ff 0%, rgba(25, 25, 25, 0.9) 40%, rgba(25, 25, 25, 0.9) 100%)'
+          } : {}}
+        >
           {/* Header row with logo and menu button */}
           <div className={`flex justify-between items-center w-full ${menuOpen ? 'px-4 sm:px-6 py-3' : ''}`}>
             <div className="logo p-[5px] mt-[-1px]">
@@ -132,6 +144,23 @@ export default function NavBar() {
                 </li>
               ))}
             </ul>
+            
+            {/* Social media links row */}
+            <div className={`flex px-2 space-x-8 mt-12 transition-all duration-300 ease-in-out ${
+              menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`} style={{ transitionDelay: menuOpen ? '500ms' : '0ms' }}>
+              {socialLinks.map((link, index) => (
+                <a 
+                  key={index}
+                  href={link.href}
+                  className="text-white text-xl hover:text-white/80 transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
