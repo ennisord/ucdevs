@@ -55,7 +55,7 @@ export default function HeroSection() {
 
           {/* Right side - description and buttons */}
           <div className="w-full md:w-1/2 lg:w-[55%] xl:w-4/5 md:pl-8">
-            <p className="text-white text-md md:text-2xl mb-4 sm:mb-4 max-w-2xl">
+            <p className="text-white text-lg md:text-2xl mb-4 sm:mb-4 max-w-2xl leading-tight">
               UCDevs is the University of Calgary&apos;s society of web developers. 
               Learn design and development skills at no cost, then apply them to 
               real-world projects for nonprofits. No previous experience required.

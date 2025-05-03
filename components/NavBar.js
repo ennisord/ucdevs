@@ -80,7 +80,7 @@ export default function NavBar() {
         <div 
           className={`relative flex flex-col bg-[#191919] bg-opacity-80 backdrop-blur-md border border-white/10 transition-all duration-300 ease-in-out ${navbarClasses}`}
           style={menuOpen ? {
-            background: 'linear-gradient(to top, #2176ff 0%, rgba(25, 25, 25, 0.9) 40%, rgba(25, 25, 25, 0.9) 100%)'
+            background: 'linear-gradient(to top, #2176ff 0%, rgba(25, 25, 25, 0.9) 25%, rgba(25, 25, 25, 0.9) 100%)'
           } : {}}
         >
           {/* Header row with logo and menu button */}
@@ -131,8 +131,12 @@ export default function NavBar() {
                 >
                   <a 
                     href={link.href} 
-                    className="block py-5 px-2 text-4xl text-white hover:bg-white/10 transition-colors"
-                    onClick={() => setMenuOpen(false)}
+                    className="block py-3 px-2 text-4xl text-white hover:bg-white/10 transition-colors"
+                    onClick={(e) => {
+                      // Prevent default to avoid navigation
+                      e.preventDefault();
+                      // Add logic to handle the navigation if needed
+                    }}
                   >
                     {link.label}
                     {link.about && (
@@ -146,7 +150,7 @@ export default function NavBar() {
             </ul>
             
             {/* Social media links row */}
-            <div className={`flex px-2 space-x-8 mt-12 transition-all duration-300 ease-in-out ${
+            <div className={`flex px-2 space-x-8 mt-4 transition-all duration-300 ease-in-out ${
               menuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`} style={{ transitionDelay: menuOpen ? '500ms' : '0ms' }}>
               {socialLinks.map((link, index) => (
@@ -156,6 +160,10 @@ export default function NavBar() {
                   className="text-white text-xl hover:text-white/80 transition-colors duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    // Prevent immediate closing of menu
+                    e.stopPropagation();
+                  }}
                 >
                   {link.label}
                 </a>
