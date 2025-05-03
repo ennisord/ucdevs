@@ -73,18 +73,20 @@ export default function PartnershipSection() {
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-4 md:px-16 relative z-10">
             <div className="max-w-xl">
-              <h2 className="text-white text-5xl sm:text-6xl md:text-7xl font-bold mb-6 leading-none">
+              <h2 className="text-white text-5xl sm:text-6xl md:text-7xl font-bold mb-1 leading-none">
                 Explore Partnerships
               </h2>
-              <p className="text-white text-xl mb-8">
+              <p className="text-white text-sm md:text-xl mb-4 sm:mb-4 max-w-2xl">
                 UCDevs is always looking for new partners, whether you&apos;re a business 
                 looking to sponsor us or a nonprofit in need of a new online presence.
               </p>
+              <div className="flex">
               <ArrowButton 
                 href="#partnerships"
                 text="Learn More"
-                className="w-44 justify-center"
+                className="w-auto justify-center"
               />
+              </div>
             </div>
           </div>
         </div>

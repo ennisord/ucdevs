@@ -12,7 +12,7 @@ export default function NavBar() {
         <span className="relative inline-block">
           {children}
           <span 
-            className="absolute left-0 bottom-0 w-full h-0.5 transform scale-x-0 transition-transform duration-300 origin-right group-hover:scale-x-100 bg-white"
+            className="absolute left-0 bottom-[1px] w-full h-0.5 transform scale-x-0 transition-transform duration-300 origin-right group-hover:scale-x-100 bg-white"
           />
         </span>
       </a>
@@ -29,7 +29,7 @@ export default function NavBar() {
           </div>
           
           {/* Navigation links - hidden on mobile */}
-          <nav className="hidden md:flex items-center ml-4 border-l border-white/10 pl-5">
+          <nav className="hidden md:flex items-center ml-4 border-l border-white/10 pl-2">
             <NavLink href="#projects">Projects</NavLink>
             <NavLink href="#learn">Learn</NavLink>
             <NavLink href="#origins">Origins</NavLink>
