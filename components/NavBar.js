@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react";
 export default function NavBar() {
   // Navigation links data
   const navLinks = [
-    { href: "#projects", label: "Projects", about: "View our project portfolio." },
-    { href: "#learn", label: "Learn", about: "Educational resources and guides." },
-    { href: "#origins", label: "Origins", about: "Our history, executive team, and founding story." },
+    { href: "#projects", label: "Projects", about: "View our portfolio of the projects we're done for nonprofits and other clubs." },
+    { href: "#learn", label: "Learn", about: "Check out our educational resources and guides for web development and design." },
+    { href: "#origins", label: "Origins", about: "Read about our history, executive team, and founding philosophy." },
     { href: "#partners", label: "Partners", about: "Meet the collaborators, sponsors, and nonprofit partners we work with." }
   ];
 
@@ -131,7 +131,7 @@ export default function NavBar() {
                 >
                   <a 
                     href={link.href} 
-                    className="block py-3 px-2 text-4xl text-white hover:bg-white/10 transition-colors"
+                    className="block py-3 px-2 text-2xl text-white hover:bg-white/10 transition-colors"
                     onClick={(e) => {
                       // Prevent default to avoid navigation
                       e.preventDefault();
@@ -140,7 +140,7 @@ export default function NavBar() {
                   >
                     {link.label}
                     {link.about && (
-                      <span className="block mt-1 text-sm text-gray-400 font-light">
+                      <span className="block mt-1 text-lg text-gray-400 font-light leading-none">
                         {link.about}
                       </span>
                     )}
