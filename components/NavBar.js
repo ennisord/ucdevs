@@ -20,20 +20,23 @@ export default function NavBar() {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 px-8 py-8 md:px-16 flex justify-center items-center z-50">
-      
-      <div className="hidden md:flex items-center ml-[0%]">
-        <nav className="flex bg-[#191919] bg-opacity-80  px-6 py-3 rounded-[0px] border border-white/10 backdrop-blur-md">
-        <div className="logo p-[5px] mt-[-1px] mr-2 pr-5 border-r border-white/10">
-        <Image src="/image.png" alt="UCDevs logo" width={51} height={17} />
+    <div className="fixed top-0 left-0 right-0 px-4 sm:px-8 py-4 sm:py-8 md:px-16 flex justify-between items-center z-50 w-full">
+      {/* Mobile and desktop navbar */}
+      <div className="w-full flex justify-center items-center">
+        <div className="flex bg-[#191919] bg-opacity-80 px-4 sm:px-6 py-3 rounded-[0px] border border-white/10 backdrop-blur-md w-full sm:w-auto">
+          <div className="logo p-[5px] mt-[-1px]">
+            <Image src="/image.png" alt="UCDevs logo" width={51} height={17} />
+          </div>
+          
+          {/* Navigation links - hidden on mobile */}
+          <nav className="hidden md:flex items-center ml-4 border-l border-white/10 pl-5">
+            <NavLink href="#projects">Projects</NavLink>
+            <NavLink href="#learn">Learn</NavLink>
+            <NavLink href="#origins">Origins</NavLink>
+            <NavLink href="#partners">Partners</NavLink>
+          </nav>
+        </div>
       </div>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#learn">Learn</NavLink>
-          <NavLink href="#origins">Origins</NavLink>
-          <NavLink href="#partners">Partners</NavLink>
-        </nav>
-      </div>
-      
     </div>
   );
 }

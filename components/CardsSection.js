@@ -29,17 +29,17 @@ export default function CardsSection() {
     linkHref, 
     isWide = false 
   }) => (
-    <div className={`border border-white/20 border-dashed border-2 rounded-[20px] p-4 flex flex-col h-full ${
+    <div className={`border border-white/20 border sm:border-2 rounded-[0px] p-2 sm:p-3 flex flex-col h-full ${
       isWide ? 'md:col-span-2 lg:col-span-1' : ''
     }`}>
       {/* Image container that takes full width of card */}
-      <div className="w-full relative h-[516px] rounded-[15px] overflow-hidden">
+      <div className="w-full relative h-[208px] sm:h-[516px] rounded-[0px] overflow-hidden">
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
           style={{ objectFit: 'cover' }}
-          className="rounded-t-[15px]"
+          className="rounded-t-[0px]"
         />
       </div>
       
@@ -94,7 +94,7 @@ export default function CardsSection() {
          * - 2 columns on medium screens
          * - 3 columns on large screens
          */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-8">
           {/* Map through card data to generate cards dynamically */}
           {cardsData.map((card, index) => (
             <Card

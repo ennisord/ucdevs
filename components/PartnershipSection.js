@@ -48,14 +48,14 @@ export default function PartnershipSection() {
       className="relative w-full overflow-hidden"
     >
       {/* Container - half height on mobile, aspect ratio on desktop */}
-      <div className="relative w-full h-[75vh] md:h-auto md:aspect-[16/10]">
+      <div className="relative w-full h-[100vh] md:h-auto md:aspect-[16/10]">
         {/* Background image with parallax effect */}
         <motion.div 
           className="absolute inset-0 z-0"
           style={{ y: backgroundY }}
         >
           <Image
-            src="/index_partnership.svg"
+            src="/mackimmie.png"
             alt="Partnership background"
             fill
             style={{ objectFit: 'cover' }}

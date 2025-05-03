@@ -36,7 +36,7 @@ export default function HeroSection() {
           style={{ y: backgroundY }}
         >
           <Image 
-            src="/header.png" 
+            src="/hero.png" 
             alt="UCDevs background" 
             fill
             style={{ objectFit: 'cover' }}
