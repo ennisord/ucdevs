@@ -45,7 +45,7 @@ export default function HeroSection() {
         <div className="absolute bottom-16 left-0 right-0 z-20 px-4 md:px-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-6">
           {/* Left side - Catch Phrase*/}
           <div className="md:max-w-[45%]">
-            <div className="text-white mb-[-32px] sm:mb-[-24px] text-6xl sm:text-8xl md:text-8xl font-bold leading-[0.95] tracking-tight">
+            <div className="text-white mb-[-32px] sm:mb-[-24px] text-6xl sm:text-8xl md:text-8xl font-bold leading-[0.95]">
               <div>Learn.</div>
               <div>Design.</div>
               <div>Develop.</div>
