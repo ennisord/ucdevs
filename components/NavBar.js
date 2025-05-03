@@ -78,7 +78,7 @@ export default function NavBar() {
       {/* Mobile and desktop navbar */}
       <div className={`w-full h-full flex ${menuOpen ? 'items-start' : 'justify-center items-center'}`}>
         <div 
-          className={`relative flex flex-col bg-[#191919] bg-opacity-80 backdrop-blur-md border border-white/10 transition-all duration-300 ease-in-out ${navbarClasses}`}
+          className={`relative flex flex-col bg-[#202020] bg-opacity-80 backdrop-blur-md border border-white/10 transition-all duration-300 ease-in-out ${navbarClasses}`}
           style={menuOpen ? {
             background: 'linear-gradient(to top, #383838 0%, rgba(25, 25, 25, 0.9) 15%, rgba(25, 25, 25, 0.9) 100%)'
           } : {}}

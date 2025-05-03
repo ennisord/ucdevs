@@ -32,7 +32,7 @@ export default function HeroSection() {
           {/* This container is positioned to show the right side on mobile */}
           <div className="absolute inset-0 md:left-0 -left-[100%] w-[200%] md:w-full h-full">
             <Image 
-              src="/hero.png" 
+              src="/303030header.png" 
               alt="UCDevs background"
               fill
               className="object-cover"
@@ -41,8 +41,8 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101010] to-transparent z-10"></div>
+        {/* Gradient overlay - less intense on mobile, normal on desktop */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101010] to-transparent opacity-100 z-10"></div>
 
         {/* Content */}
         <div className="absolute bottom-16 left-0 right-0 z-20 px-4 md:px-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-6">
