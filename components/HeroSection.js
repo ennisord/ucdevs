@@ -1,13 +1,7 @@
 import Image from "next/image";
-import { League_Spartan } from "next/font/google";
 import ArrowButton from "./ArrowButton";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
-const leagueSpartan = League_Spartan({
-  subsets: ["latin"],
-  weight: ["500", "900"],
-});
 
 export default function HeroSection() {
   // Reference to the section container
@@ -26,7 +20,7 @@ export default function HeroSection() {
   return (
     <div 
       ref={containerRef}
-      className={`min-h-screen bg-[#101010] ${leagueSpartan.className} overflow-hidden`}
+      className="min-h-screen bg-[#101010] overflow-hidden"
     >
       {/* Main Content */}
       <div className="relative w-full h-screen">

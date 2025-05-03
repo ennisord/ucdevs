@@ -9,7 +9,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-league-spartan);
+  --font-sans: var(--font-vt323);
 }
 
 /* Base styles */

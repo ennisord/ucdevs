@@ -1,21 +1,21 @@
 import Head from "next/head";
 import Image from "next/image";
-import { League_Spartan } from "next/font/google";
+import { VT323 } from "next/font/google";
 import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import CardsSection from "../components/CardsSection";
 import PartnershipSection from "../components/PartnershipSection";
 import Footer from "../components/Footer";
 
-// Using League Spartan font
-const leagueSpartan = League_Spartan({
+// Using VT323 font
+const vt323 = VT323({
   subsets: ["latin"],
-  weight: ["500", "900"],
+  weight: ["400"],
 });
 
 export default function Home() {
   return (
-    <div className={`min-h-screen bg-[#101010] ${leagueSpartan.className}`}>
+    <div className={`min-h-screen bg-[#101010] ${vt323.className}`}>
       <Head>
         <title>UCDevs</title>
         <meta name="description" content="UCDevs - University of Calgary's society of web developers" />
