@@ -22,7 +22,7 @@ export default function ArrowButton({ href, text, external = false, className = 
   return (
     <a
       href={href}
-      className={`relative bg-white text-black px-4 sm:px-6 py-[10px] rounded-[0px] font-medium flex items-center text-sm sm:text-lg group ${className}`}
+      className={`relative bg-white text-black px-4 sm:px-6 py-[10px] rounded-[0px] font-medium flex items-center text-md sm:text-2xl group ${className}`}
       {...externalProps}
     >
       <span className="absolute left-0 top-0 w-full h-full bg-gray-300 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></span>

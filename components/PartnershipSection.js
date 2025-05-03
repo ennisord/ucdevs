@@ -76,7 +76,7 @@ export default function PartnershipSection() {
               <h2 className="text-white text-5xl sm:text-6xl md:text-7xl font-bold mb-1 leading-none">
                 Explore Partnerships
               </h2>
-              <p className="text-white text-sm md:text-xl mb-4 sm:mb-4 max-w-2xl">
+              <p className="text-white text-md md:text-2xl mb-4 sm:mb-4 max-w-2xl">
                 UCDevs is always looking for new partners, whether you&apos;re a business 
                 looking to sponsor us or a nonprofit in need of a new online presence.
               </p>

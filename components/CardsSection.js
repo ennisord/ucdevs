@@ -44,8 +44,8 @@ export default function CardsSection() {
       </div>
       
       {/* Card content */}
-      <h2 className="mt-4 text-white text-2xl lg:text-3xl font-bold mb-3">{title}</h2>
-      <p className="text-gray-300 mb-6 flex-grow">
+      <h2 className="mt-4 text-white text-2xl lg:text-5xl font-bold mb-3">{title}</h2>
+      <p className="text-white text-md md:text-2xl mb-4 sm:mb-4 max-w-2xl">
         {description}
       </p>
       

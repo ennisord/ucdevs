@@ -45,7 +45,7 @@ export default function HeroSection() {
         <div className="absolute bottom-16 left-0 right-0 z-20 px-4 md:px-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 md:gap-6">
           {/* Left side - Catch Phrase*/}
           <div className="md:max-w-[45%]">
-            <div className="text-white mb-[-32px] sm:mb-[-24px] text-5xl sm:text-8xl md:text-8xl font-bold leading-[0.95] tracking-tight">
+            <div className="text-white mb-[-32px] sm:mb-[-24px] text-6xl sm:text-8xl md:text-8xl font-bold leading-[0.95] tracking-tight">
               <div>Learn.</div>
               <div>Design.</div>
               <div>Develop.</div>
@@ -55,7 +55,7 @@ export default function HeroSection() {
 
           {/* Right side - description and buttons */}
           <div className="w-full md:w-1/2 lg:w-[55%] xl:w-4/5 md:pl-8">
-            <p className="text-white text-sm md:text-xl mb-4 sm:mb-4 max-w-2xl">
+            <p className="text-white text-md md:text-2xl mb-4 sm:mb-4 max-w-2xl">
               UCDevs is the University of Calgary&apos;s society of web developers. 
               Learn design and development skills at no cost, then apply them to 
               real-world projects for nonprofits. No previous experience required.
