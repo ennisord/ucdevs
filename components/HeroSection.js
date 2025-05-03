@@ -26,16 +26,19 @@ export default function HeroSection() {
       <div className="relative w-full h-screen">
         {/* Background image with parallax effect */}
         <motion.div 
-          className="absolute inset-0 bg-cover bg-center z-0"
+          className="absolute inset-0 z-0 overflow-hidden"
           style={{ y: backgroundY }}
         >
-          <Image 
-            src="/hero.png" 
-            alt="UCDevs background" 
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-          />
+          {/* This container is positioned to show the right side on mobile */}
+          <div className="absolute inset-0 md:left-0 -left-[100%] w-[200%] md:w-full h-full">
+            <Image 
+              src="/hero.png" 
+              alt="UCDevs background"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </motion.div>
 
         {/* Gradient overlay */}
