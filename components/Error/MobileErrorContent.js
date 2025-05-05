@@ -21,7 +21,7 @@ export default function MobileErrorContent() {
           <div className="text-white text-6xl font-bold mb-3">found.</div>
           
           <div className="text-white text-2xl mb-8 pr-6">
-            we couldn't find the page you&apos;re looking for
+            we couldn&apos;t find the page you&apos;re looking for
           </div>
           
           <ArrowButton href="/" text="return" className="inline-block" />
