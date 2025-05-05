@@ -18,7 +18,7 @@ export default function DesktopErrorContent() {
       
       {/* Description */}
       <div className="text-4xl mb-12 text-white">
-        we couldn't find the page youre looking for
+        we couldn&apos;t find the page you&apos;re looking for
       </div>
       
       <ArrowButton href="/" text="return" className="text-3xl px-10 py-2" />
