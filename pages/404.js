@@ -2,9 +2,8 @@ import Head from "next/head";
 import { VT323 } from "next/font/google";
 import FinalFooter from "../components/FinalFooter";
 import ErrorLogo from "../components/Error/ErrorLogo";
-import ErrorBackground from "../components/Background";
-import MobileErrorContent from "../components/Error/MobileErrorContent";
-import DesktopErrorContent from "../components/Error/DesktopErrorContent";
+import ErrorBackground from "../components/Error/Background";
+import MobileErrorContent, { DesktopErrorContent } from "../components/Error/ErrorContent";
 
 // Using the same VT323 font as the index page
 const vt323 = VT323({
