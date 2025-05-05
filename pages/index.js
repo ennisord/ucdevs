@@ -38,7 +38,7 @@ export default function Home() {
        {/* Partnership Section */}
        <PartnershipSection />
  
-       {/* Footer Section */}
+       {/* Footer Section - now includes FinalFooter internally */}
        <Footer />
     </div>
   );

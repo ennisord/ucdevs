@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import FinalFooter from './FinalFooter';
 
 export default function Footer() {
   // Helper component for footer navigation links
@@ -15,50 +15,33 @@ export default function Footer() {
   );
   
   return (
-    <footer className="bg-[#101010] pt-8 pb-8 px-8 md:px-16 relative">
-      {/* Navigation Links */}
-      <div className="container mx-auto relative z-20">
-        <div className="border-t border-b border-dashed border-gray-500 divide-y divide-dashed divide-gray-500">
-          <FooterNavLink title="Projects" href="#projects" />
-          <FooterNavLink title="Learn" href="#learn" />
-          <FooterNavLink title="Team" href="#team" />
-          <FooterNavLink title="Partners" href="#partners" />
-        </div>
-
-        {/* Footer Bottom - Copyright and Social */}
-        <div className="mt-10 flex flex-row justify-between items-center relative z-20">
-          <div className="text-gray-500 text-lg">
-            © UCDevs 2025
+    <>
+      <footer className="bg-[#101010] pt-8 pb-8 px-8 md:px-16 relative">
+        {/* Navigation Links */}
+        <div className="container mx-auto relative z-20">
+          <div className="border-t border-b border-dashed border-gray-500 divide-y divide-dashed divide-gray-500">
+            <FooterNavLink title="Projects" href="#projects" />
+            <FooterNavLink title="Learn" href="#learn" />
+            <FooterNavLink title="Team" href="#team" />
+            <FooterNavLink title="Partners" href="#partners" />
           </div>
-          <div className="flex space-x-12">
-            <Link href="https://twitter.com/ucdevs" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-lg">
-              Twitter
-            </Link>
-            <Link href="https://discord.gg/XmXhmJ9Xx6" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-lg">
-              Discord
-            </Link>
+
+          {/* Footer Bottom - Social Links Only */}
+          <div className="mt-10 flex flex-row justify-end items-center relative z-20">
+            <div className="flex space-x-12">
+              <Link href="https://twitter.com/ucdevs" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-lg">
+                Twitter
+              </Link>
+              <Link href="https://discord.gg/XmXhmJ9Xx6" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-lg">
+                Discord
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Large UCDevs Logo Watermark - positioned below links with responsive scaling */}
-      <div className="absolute bottom-0 left-0 right-0 overflow-hidden z-10" style={{ height: "65%" }}>
-        <div className="relative w-full h-full">
-          <Image 
-            src="/UCDevs.png" 
-            alt="UCDevs watermark" 
-            fill
-            style={{ 
-              objectFit: 'contain',
-              objectPosition: 'center top',
-              opacity: 0.08,
-              transform: 'scale(var(--logo-scale))'
-            }}
-            className="scale-[0.9] sm:scale-[1.2] md:scale-[1.5] lg:scale-[1.8]"
-            priority={false}
-          />
-        </div>
-      </div>
-    </footer>
+      </footer>
+      
+      {/* Add FinalFooter directly within the Footer component */}
+      <FinalFooter />
+    </>
   );
 }
